@@ -22,7 +22,7 @@ function Uygulama() {
       title="My Functional Component" 
       person={person}
       hobbies={["react","redux","javascript"]}
-      componentExample={<span>Component Item</span>}
+      componentExample={<span>Component Example</span>}
       />
       <ClassExample title="My Class Component" person={person}/>
     </div>

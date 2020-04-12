@@ -8,10 +8,11 @@ import React from 'react'
 function FunctionalComponent(props) {
     console.log(props);
     const { title, person, hobbies, componentExample } = props;
+      // props.title = "Joe" !! YAPAMAYIZ
     return (
         <div>
-            <h1>{title}</h1>This is Functional Componentyour name is {person.name}
-
+            <h1>{title}</h1>
+            This is Functional Component your name is {person.name}
             <div>
                 <ul>
                     {
