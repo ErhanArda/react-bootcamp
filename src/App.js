@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import FunctionalComponent from "./components/FunctionalExample"
+import ClassExample from "./components/ClassExample"
+
+function Uygulama() {
+  const girisYapildi = true;
+  const person = {
+    name: "John",
+    age: 30
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        girisYapildi ?
+          <div style={{ color: "red" }} className="person">Hello {person.name}, age is {person.age}</div>
+          : <div>Giriş yapınız</div>
+      }
+
+      <FunctionalComponent 
+      title="My Functional Component" 
+      person={person}
+      hobbies={["react","redux","javascript"]}
+      componentExample={<span>Component Item</span>}
+      />
+      <ClassExample title="My Class Component" person={person}/>
     </div>
   );
 }
 
-export default App;
+export default Uygulama;
